@@ -1,0 +1,16 @@
+.invalid {
+    border-color: red;
+}
+
+#result {
+    padding-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.err {
+    color: red;
+    margin-left: 20px;
+}
