@@ -7,6 +7,7 @@
         count = 0;
     console.log(typeof(result));
     print.addEventListener('click',function () {
+        count = 0;
         success_msg = "";
         for(var i = 0; i<input.length; i++) {
             var validator = check(input[i]),
@@ -21,7 +22,6 @@
             for(var i = 0; i<input.length; i++) {
                 success_msg += success(input[i]);
             }
-            result.textContent = success_msg;
             count = 0;
         }
     });
@@ -102,7 +102,9 @@
     
     function success(input){
         var id = input.getAttribute('id');
-        return id.toUpperCase() + '  :  ' + input.value+'  ';
+        var para = document.createElement('p');
+        para.textContent = id.toUpperCase() + '  :  ' + input.value;
+        result.appendChild(para);
     }
     
 })();
